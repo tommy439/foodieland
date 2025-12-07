@@ -1398,7 +1398,6 @@ box-shadow:  0 4px 10px rgba(0,0,0,0.2);
   .menu-recipes h2 {
     background: linear-gradient(90deg, #ff6600, #ff1a8c, #00ccff, #00dd77);
   background-size: 300%;
-  -webkit-background-clip:text;
   -webkit-text-fill-color: transparent;
   animation: moveGradient 4s linear infinite;
   /* animation: colorLoop 3s infinite alternate; */
