@@ -22,9 +22,9 @@
                        <!-- head start here -->
                     <header class="main-header">
                               <div class="nav-container">
-                                         <div class="nav-toggle">
-      <i class="bi bi-list"></i> 
-    </div>
+                                         <div class="nav-toggle" onclick="toggleMenu()">
+                                                   <i class="bi bi-list"></i>
+                                         </div>
 
                                         <!-- Brand Name -->
                                         <div class="brand">
@@ -32,12 +32,17 @@
                                         </div>
 
                                         <!-- Navigation Links -->
-                                        <nav class="nav-links">
+                                        <nav class="nav-links" id="navLinks">
                                                   <a href="#home">Home</a>
                                                   <a href="#recipes">Recipes</a>
                                                   <a href="index.htm">Blog</a>
                                                   <a href="index.html">Contact</a>
                                                   <a href="#aboutus">About Us</a>
+                                                  <div class="mobile-social-icons">
+                                                            <i class="bi bi-facebook"></i>
+                                                            <i class="bi bi-twitter"></i>
+                                                            <i class="bi bi-instagram"></i>
+                                                  </div>
                                         </nav>
 
                                         <!-- Icons -->
@@ -261,16 +266,10 @@
           </main>
 
 <script>
-          const toggleBtn = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-toggleBtn.addEventListener('click', () => {
-  if (navLinks.style.display === 'flex') {
-    navLinks.style.display = 'none';
-  } else {
-    navLinks.style.display = 'flex';
-  }
-});
+          function toggleMenu() {
+                    const nav = document.getElementById("navLinks");
+                    nav.classList.toggle("show");
+          }
 </script>
 
 

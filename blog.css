@@ -70,6 +70,15 @@ height: auto;
   cursor: pointer;
 }
 
+/* Mobile social icons - hidden on desktop */
+.mobile-social-icons {
+  display: none;
+}
+
+.icon {
+  display: flex;
+}
+
 .hero-section {
   background-color: white;
   justify-content: space-between;
@@ -905,12 +914,9 @@ hr {
 
 @media screen and (max-width: 600px) {
   body {
-    /* padding: 10px; */
     cursor: pointer;
-
-    /* border: 2px solid red; */
   }
-  body,html{
+  body, html {
     overflow-x: hidden;
   }
 
@@ -918,10 +924,15 @@ hr {
     display: block;
   }
 
+  /* Hide desktop social icons */
+  .icon {
+    display: none;
+  }
+
   /* Hide the UL menu by default */
   .headlinks ul {
     display: none;
-
+    flex-direction: column;
     background: white;
     position: absolute;
     top: 38px;
@@ -937,6 +948,25 @@ hr {
     display: flex;
   }
 
+  /* Show mobile social icons in hamburger menu */
+  .mobile-social-icons {
+    display: flex;
+    gap: 15px;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    margin-top: 10px;
+  }
+
+  .mobile-social-icons a {
+    color: #333;
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+
+  .mobile-social-icons a:hover {
+    color: #ff6600;
+  }
+
   .head {
     background-color: white;
     display: flex;
@@ -944,12 +974,11 @@ hr {
     gap: 2px;
     position: fixed;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     top: 0;
     right: 0;
     left: 0;
     z-index: 1000;
-    background-color: #3498db;
   }
 
   .headlinks ul li a:hover {
@@ -957,20 +986,6 @@ hr {
     padding: 3px;
     border-radius: 10px;
     color: #b8a90a;
-
-  }
-
-
-  .icon i {
-    font-size: 20px;
-    color: black;
-    padding-right: 20px;
-    transition: tranform 0.3s ease;
-  }
-
-  .icon :hover {
-    color: blueviolet;
-    transform: translateX(5px);
   }
 
   .hero-section {
@@ -1552,4 +1567,103 @@ box-shadow:  0 4px 10px rgba(0,0,0,0.2);
   }
 }
 
+/* Tablet Responsive - 768px */
+@media screen and (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
 
+  .icon {
+    display: none;
+  }
+
+  .headlinks ul {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    padding: 15px;
+    gap: 12px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  .headlinks ul.show {
+    display: flex;
+  }
+
+  .mobile-social-icons {
+    display: flex;
+    gap: 15px;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    margin-top: 10px;
+  }
+
+  .mobile-social-icons a {
+    color: #333;
+    font-size: 20px;
+  }
+
+  .cheflogo {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .chefpics {
+    width: 100%;
+    height: 250px;
+  }
+
+  .menu-recpes {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .row-9 {
+    flex-wrap: wrap;
+    padding: 0 1rem;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .row {
+    flex-wrap: wrap;
+  }
+
+  .allinsta {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .subscribe-box {
+    width: 90%;
+    height: auto;
+    padding: 30px 20px;
+  }
+
+  .foodeilad h3 {
+    padding: 0 2rem;
+  }
+
+  .mama {
+    flex-direction: column;
+    padding: 0 2rem;
+    gap: 15px;
+  }
+
+  .mama ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .foodeiend {
+    padding: 10px 2rem;
+  }
+}

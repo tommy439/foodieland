@@ -17,7 +17,14 @@
 
 
 }
-.menu-btn{
+.menu-btn {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Mobile social icons - hidden on desktop */
+.mobile-social-icons {
     display: none;
 }
 
@@ -451,50 +458,166 @@ footer{
           color: #ff6600;
 }
 /* coding ends */
+
+/* Tablet and Mobile Responsive */
 @media (max-width: 768px) {
-    body{
-        background-color: #ff6600;
-    }
-    .menu-btn{
+    .menu-btn {
         display: block;
-        font-size: 14px;
+        font-size: 24px;
         font-weight: bold;
-        color: white;
+        color: #333;
         cursor: pointer;
     }
-    .brand{
-        flex: 1;
-        text-align: center;
-        font-size: 15px;
-        font-weight: 700;
+
+    .nav-icons {
+        display: none;
     }
-    .nav-icons{
-        font-size: 20px;
-        margin-left: 10px;
-    }
-    .nav-links{
+
+    .nav-links {
         position: fixed;
         top: 0;
-        left: -250px;
-        width: 250px;
-        height: 100%;
-
-        background-color: #333;
+        left: -280px;
+        width: 280px;
+        height: 100vh;
+        background-color: white;
         padding-top: 80px;
         display: flex;
         flex-direction: column;
         gap: 20px;
         transition: 0.4s ease;
         z-index: 999;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
     }
-    .nav-links a{
-        padding: 10px 20px;
-        text-decoration: none;
-        font-size: 18px;
-        color: black;
-        font-weight: 600;
-    }
-    .nav-links:active{
+
+    .nav-links.show {
         left: 0;
+    }
+
+    .nav-links a {
+        padding: 12px 25px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #333;
+        font-weight: 500;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-links a:hover {
+        background-color: #f5f5f5;
+        color: #ff6600;
+    }
+
+    /* Mobile social icons in hamburger menu */
+    .mobile-social-icons {
+        display: flex;
+        gap: 20px;
+        padding: 20px 25px;
+        border-top: 1px solid #eee;
+        margin-top: auto;
+    }
+
+    .mobile-social-icons i {
+        font-size: 22px;
+        color: #333;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .mobile-social-icons i:hover {
+        color: #ff6600;
+    }
+
+    /* Blog page content responsiveness */
+    .foodside-contanier {
+        flex-direction: column;
+        margin: 40px 15px;
+    }
+
+    .foodside1 {
+        width: 100%;
+    }
+
+    .foodside-text {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .foodside-text img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .sidefoodmage {
+        width: 100% !important;
+        height: auto;
+    }
+
+    .sid-foodcontanier {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-top: 30px;
+        padding: 0 15px;
+    }
+
+    .Tastyrecepies {
+        gap: 15px;
+    }
+
+    .desh {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .box-number {
+        margin-top: 20px;
+    }
+
+    .subscribe-box {
+        width: 90%;
+        height: auto;
+        padding: 30px 15px;
+    }
+
+    footer {
+        padding: 15px 1rem;
+    }
+
+    .footer-end1 {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footer-end1 ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .row-layout {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .article {
+        padding: 0 15px;
+    }
+
+    .article h1 {
+        font-size: 28px;
+    }
+
+    .input-wrap {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .input-wrap input {
+        width: 100%;
+    }
+
+    .input-wrap button {
+        right: 5px;
     }
 }
